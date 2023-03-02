@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Mr BIN Card Info</string>
+    <string name="bank_name">Bank Name:</string>
+    <string name="type_of_card">Type of card:</string>
+    <string name="brand">Brand</string>
+    <string name="country">Country</string>
+    <string name="payment_processing_system">payment system:</string>
+</resources>
