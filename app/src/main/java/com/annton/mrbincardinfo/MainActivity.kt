@@ -130,7 +130,7 @@ class MainActivity : AppCompatActivity() {
                         binding.textViewCardType.text = "Type: ${cardInfo.type}"
                         binding.textViewCardBrand.text = "Brand: ${cardInfo.brand}"
                         binding.textViewCountry.text =
-                            "Country: ${cardInfo.country.name} + ${cardInfo.country.emoji}"
+                            "Country:${cardInfo.country.emoji}${cardInfo.country.name}"
                         binding.textViewPaymentSystem.text = "Scheme: ${cardInfo.scheme}"
 
 
@@ -169,7 +169,7 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this@MainActivity, "url clicked", Toast.LENGTH_SHORT).show()
 
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
-            if (intent.resolveActivity(packageManager) != null) { startActivity(intent)}
+             startActivity(intent)
 
         }
 

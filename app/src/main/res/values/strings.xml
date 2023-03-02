@@ -5,4 +5,6 @@
     <string name="brand">Brand</string>
     <string name="country">Country</string>
     <string name="payment_processing_system">payment system:</string>
+    <string name="header_text_enter_6_8_digits">Enter the first 6-8 digits of the card number</string>
+    <string name="card_number">card number</string>
 </resources>
