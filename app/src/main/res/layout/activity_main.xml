@@ -199,8 +199,9 @@
                 tools:text="url:." />
 
 
+
             <TextView
-                android:id="@+id/text_view_card_type"
+                android:id="@+id/text_view_card_type_holder"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
@@ -208,7 +209,17 @@
                 android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/text_view_bank_url"
-                tools:text="@string/type_of_card" />
+                android:text="@string/type_of_card" />
+            <TextView
+                android:id="@+id/text_view_card_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_marginTop="4dp"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@id/text_view_card_type_holder"
+                app:layout_constraintTop_toBottomOf="@id/text_view_bank_url"
+                tools:text="debit" />
 
             <TextView
                 android:id="@+id/text_view_card_brand_holder"
@@ -219,7 +230,7 @@
                 android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/text_view_card_type"
-                tools:text="@string/brand" />
+                android:text="@string/brand" />
 
             <TextView
                 android:id="@+id/text_view_card_brand"
@@ -243,7 +254,7 @@
                 android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/text_view_card_brand"
-                tools:text="@string/payment_processing_system" />
+                android:text="@string/payment_processing_system" />
 
             <TextView
                 android:id="@+id/text_view_payment_system"

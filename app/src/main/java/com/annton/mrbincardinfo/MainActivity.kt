@@ -57,14 +57,15 @@ class MainActivity : AppCompatActivity() {
         binding.buttonGetInfo.setOnClickListener {
             val bin = binding.editTextBin.text.toString().trim()
             localResults = false
-            binding.cardViewPrevious.visibility = View.VISIBLE
+            hideResults()
             getBinInfo(bin)
-            showResults()
+
         }
     }
 
 
     private fun getBinInfo(bin: String) {
+
         val client = BinListApiClient()
 
         if (localResults) {
@@ -277,7 +278,7 @@ class MainActivity : AppCompatActivity() {
             putString("card#$bin country longitude", body?.country?.longitude)
             putString("card#$bin scheme", body?.scheme)
 
-
+            binding.cardViewPrevious.visibility = View.VISIBLE
         }
     }
 
