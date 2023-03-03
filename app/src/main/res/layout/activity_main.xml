@@ -108,15 +108,16 @@
                 android:text="@string/bank_name" />
             <TextView
                 android:id="@+id/text_view_bank_name"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="6dp"
                 android:layout_marginTop="4dp"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 android:textSize="18sp"
-                app:layout_constraintStart_toEndOf="@id/text_view_bank_name_holder"
-                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_view_bank_name_holder"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 tools:text="bank" />
 
             <TextView
@@ -155,7 +156,7 @@
 
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/text_view_country"
-                tools:text="@string/city" />
+                android:text="@string/city" />
 
             <TextView
                 android:id="@+id/text_view_city"
