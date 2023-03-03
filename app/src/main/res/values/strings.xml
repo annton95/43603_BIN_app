@@ -3,8 +3,13 @@
     <string name="bank_name">Bank Name:</string>
     <string name="type_of_card">Type of card:</string>
     <string name="brand">Brand</string>
-    <string name="country">Country</string>
+    <string name="country">Country:</string>
     <string name="payment_processing_system">payment system:</string>
-    <string name="header_text_enter_6_8_digits">Enter the first 6-8 digits of the card number</string>
-    <string name="card_number">card number</string>
+    <string name="header_text_enter_6_8_digits">Enter the first 6–8 digits of the card number</string>
+    <string name="card_number">Card number (BIN)</string>
+    <string name="city">City:</string>
+    <string name="no_bank_info">No bank info</string>
+    <string name="check">Check</string>
+    <string name="clear">Clear</string>
+    <string name="previous_requests">Previous requests</string>
 </resources>

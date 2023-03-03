@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MrBIN Информация о карте</string>
+    <string name="bank_name">Название банка:</string>
+    <string name="type_of_card">Тип карты:</string>
+    <string name="brand">Бренд:</string>
+    <string name="country">Страна:</string>
+    <string name="payment_processing_system">Платёжная система:</string>
+    <string name="header_text_enter_6_8_digits">Введите BIN (первые 6–8 цифр номера карты)</string>
+    <string name="card_number">Номер карты (BIN)</string>
+    <string name="city">Город:</string>
+    <string name="no_bank_info">Нет информации о банке</string>
+    <string name="check">Проверить</string>
+    <string name="clear">Очистить</string>
+    <string name="previous_requests">История запросов</string>
+</resources>

@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:background="@color/green_lite"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:padding="24dp"
     tools:context=".MainActivity">
 
@@ -62,7 +67,7 @@
     <ProgressBar
         android:id="@+id/progress_bar_check"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="24dp"
         app:layout_constraintTop_toBottomOf="@id/button_get_info" />
 
 
@@ -71,7 +76,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="check"
+        android:text="@string/check"
         app:layout_constraintEnd_toEndOf="@id/card_view_card"
         app:layout_constraintTop_toBottomOf="@id/card_view_card" />
 
@@ -91,7 +96,31 @@
 
 
             <TextView
+                android:id="@+id/text_view_bank_name_holder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="@string/bank_name" />
+            <TextView
                 android:id="@+id/text_view_bank_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@id/text_view_bank_name_holder"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="bank" />
+
+            <TextView
+                android:id="@+id/text_view_country_holder"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
@@ -99,11 +128,10 @@
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:text="@string/bank_name" />
-
+                app:layout_constraintTop_toBottomOf="@id/text_view_bank_name"
+                android:text="@string/country" />
             <TextView
-                android:id="@+id/text_view_bank_phone"
+                android:id="@+id/text_view_country"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
@@ -111,9 +139,49 @@
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="@id/text_view_bank_name"
-
+                app:layout_constraintStart_toEndOf="@id/text_view_country_holder"
                 app:layout_constraintTop_toBottomOf="@id/text_view_bank_name"
+                tools:text="Russia" />
+
+
+            <TextView
+                android:id="@+id/text_view_city_holder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_view_country"
+                tools:text="@string/city" />
+
+            <TextView
+                android:id="@+id/text_view_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/text_view_city_holder"
+                app:layout_constraintTop_toBottomOf="@id/text_view_country"
+                tools:text="City City" />
+
+
+            <TextView
+                android:id="@+id/text_view_bank_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_view_city"
                 tools:text="tel:." />
 
             <TextView
@@ -121,11 +189,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="8dp"
                 android:textColor="@color/purple_500"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="@id/text_view_bank_name"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/text_view_bank_phone"
                 tools:text="url:." />
 
@@ -137,9 +205,20 @@
                 android:layout_margin="4dp"
                 android:layout_marginTop="4dp"
                 android:textSize="18sp"
-                app:layout_constraintStart_toStartOf="@id/text_view_bank_name"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/text_view_bank_url"
                 tools:text="@string/type_of_card" />
+
+            <TextView
+                android:id="@+id/text_view_card_brand_holder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_marginTop="4dp"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_view_card_type"
+                tools:text="@string/brand" />
 
             <TextView
                 android:id="@+id/text_view_card_brand"
@@ -148,22 +227,22 @@
                 android:layout_margin="4dp"
                 android:layout_marginTop="4dp"
                 android:textSize="18sp"
-                app:layout_constraintStart_toStartOf="@id/text_view_bank_name"
+                app:layout_constraintStart_toEndOf="@id/text_view_card_brand_holder"
                 app:layout_constraintTop_toBottomOf="@id/text_view_card_type"
                 tools:text="@string/brand" />
 
+
+
             <TextView
-                android:id="@+id/text_view_country"
+                android:id="@+id/text_view_payment_system_holder"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
                 android:layout_marginTop="4dp"
-                android:textColor="@color/black"
                 android:textSize="18sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="@id/text_view_bank_name"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/text_view_card_brand"
-                tools:text="@string/country" />
+                tools:text="@string/payment_processing_system" />
 
             <TextView
                 android:id="@+id/text_view_payment_system"
@@ -172,9 +251,10 @@
                 android:layout_margin="4dp"
                 android:layout_marginTop="4dp"
                 android:textSize="18sp"
-                app:layout_constraintStart_toStartOf="@id/text_view_bank_name"
-                app:layout_constraintTop_toBottomOf="@id/text_view_country"
-                tools:text="@string/payment_processing_system" />
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/text_view_payment_system_holder"
+                app:layout_constraintTop_toBottomOf="@id/text_view_card_brand"
+                tools:text="visa" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
@@ -185,9 +265,10 @@
         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="clear"
+        android:text="@string/clear"
         app:layout_constraintEnd_toEndOf="@id/card_view_card_result"
-        app:layout_constraintTop_toBottomOf="@id/card_view_card_result" />
+        app:layout_constraintTop_toBottomOf="@id/card_view_card_result"
+        />
 
     <TextView
         android:id="@+id/text_view_previous_header"
@@ -195,18 +276,18 @@
         android:layout_height="0dp"
         android:fontFamily="sans-serif-light"
         android:gravity="center"
-        android:text="Previous requests"
+        android:text="@string/previous_requests"
         android:textColor="@color/black"
-        android:textSize="24sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@id/button_clear_list"
         app:layout_constraintEnd_toStartOf="@id/button_clear_list"
         app:layout_constraintStart_toStartOf="@id/card_view_card_result"
         app:layout_constraintTop_toBottomOf="@id/card_view_card_result" />
 
 
-    >
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_previous"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:elevation="12dp"
@@ -214,13 +295,13 @@
         app:cardCornerRadius="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button_clear_list">
+        app:layout_constraintTop_toBottomOf="@id/text_view_previous_header">
 
 
-        <ListView
+        <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/list_view"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="wrap_content"
             android:scrollbars="vertical"
             tools:listitem="@layout/support_simple_spinner_dropdown_item" />
 
@@ -228,3 +309,5 @@
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
